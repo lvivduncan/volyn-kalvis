@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,400i,700,700i|Oswald:400,600&display=swap&subset=cyrillic');
+
+/* include grid */
+@import url('./grid.css');
+
+/* include menu */
+@import url('./menu.css');
+
+/* include slider */
+@import url('./slider.css');
+
+/* include parallax */
+@import url('./parallax.css');
+
+/* style */
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --dark: #1f1f1f;
+  --dark-footer: #181818;
+  --dark-copyright: #1e1e1e;
+  --red: #920d12;
+  --light: #f1eded;
+  --white: #fff;
+  --dark-red: #5a070c;
+  --light-red: #dc3545;
+  --light-red-2: #d0181e;
+  --light-red-3: #b5161b;
+
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--black);
+  margin: 0 0 10px;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--dark);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* заголовок блоку */
+.header-section {
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.header-section p {
+  text-align: center !important;
+}
+
+/* заголовок з рискою вгорі */
+.title {
+  position: relative;
+  font-size: 32px;
+  line-height: 42px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  margin-left: -50px;
+  height: 2px;
+  width: 100px;
+  background-color: var(--red);
+}
+
+p.lead {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* 6 blocks */
+#welcome article:nth-child(1) {
+  background-color: var(--dark-red);
+}
+
+#welcome article:nth-child(2) {
+  background-color: var(--red);
+}
+
+#welcome article:nth-child(3) {
+  background-color: var(--light-red-2);
+}
+
+#welcome article:nth-child(4) {
+  background-color: var(--light-red-3);
+}
+
+#welcome article:nth-child(5) {
+  background-color: var(--red);
+}
+
+#welcome article:nth-child(6) {
+  background-color: var(--dark-red);
+}
+
+#welcome a {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: underline;
+}
+
+#welcome a:hover {
+  text-decoration: none;
+}
+
+#welcome h3 {
+  margin: 10px 0;
+}
+
+#welcome p {
+  color: var(--white);
+}
+
+/* about us for home */
+#about p {
+  text-align: justify;
+}
+
+/* блок 4 новин на головній */
+#home-news {
+  background: var(--light);
+}
+
+/* 1news */
+#home-news article {
+  background: var(--white);
+}
+
+#home-news article time {
+  margin: 10px 10px 0;
+  font-size: 12px;
+  display: block;
+}
+
+#home-news article h2 {
+  margin: 15px 10px;
+}
+
+#home-news article h2 a {
+  font-size: 18px;
+  color: var(--red);
+  letter-spacing: -0.1px;
+  line-height: 23px;
+  display: block;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+#home-news article h2 a:hover {
+  color: var(--dark);
+}
+
+#home-news article p {
+  padding: 0 10px;
+  line-height: 1.3;
+}
+
+/* колбек на головній  */
+#callback {
+  color: var(--white);
+}
+
+#callback h2 {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+#callback p {
+  font-size: 22px;
+  color: var(--white);
+}
+
+#callback-button a {
+  font-size: 14px;
+  display: inline-block;
+  padding: 12px;
+  background: var(--light-red-2);
+  color: var(--light);
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin: 0 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+#callback-button a:hover {
+  background: var(--red);
+}
+
+/* пiдвал */
+#footer {
+  background: var(--dark-footer);
+}
+
+/* цопірайти */
+#copyright {
+  background: var(--dark-copyright);
+}
+
+
+
+
+
+
+/**/
