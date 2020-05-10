@@ -69,10 +69,17 @@
   }
 }
 
-#welcome > *{
+#welcome article{
   height: 350px;
   padding: 60px 0 10px;
   text-align: center;
+}
+
+@media(max-width: 776px){
+  #welcome article{
+    height: 260px;
+    padding: 30px 10px 10px;
+  }
 }
 
 /* про нас на головній */
@@ -125,15 +132,35 @@
   height: 200px;
 }
 
+@media(max-width: 460px){
+  #callback{
+    height: auto;
+  }
+}
+
 #callback .levus-parallax{
   display: grid;
   grid-template-columns: 1fr repeat(2, 600px) 1fr;
   align-items: center;
+  width: 100%;
+  height: 200px;
 }
 
 @media(max-width: 1240px){
   #callback .levus-parallax{
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 776px){
+  #callback .levus-parallax{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 460px){
+  #callback .levus-parallax{
+    height: auto;
   }
 }
 
@@ -151,7 +178,7 @@
 
 /* пiдвал */
 #footer{
-  padding: 60px 0 40px;
+  padding: 40px 0;
   display: grid;
   grid-template-columns: 1fr repeat(4, 300px) 1fr;
 }
@@ -171,6 +198,7 @@
 @media(max-width: 460px){
   #footer{
     grid-template-columns: 1fr;
+    padding: 30px 10px;
   }
 }
 

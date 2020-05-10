@@ -9,9 +9,6 @@
 /* include slider */
 @import url('./slider.css');
 
-/* include parallax */
-@import url('./parallax.css');
-
 /* style */
 *,
 ::after,
@@ -107,6 +104,15 @@ p.lead {
   font-size: 18px;
   font-weight: 300;
   line-height: 22px;
+}
+
+/**/
+#logo{
+  text-decoration: none;
+  background: url('../images/logo.png') no-repeat;
+  width: 180px;
+  height: 58px;
+  display: block;
 }
 
 /* 6 blocks */
@@ -207,6 +213,30 @@ p.lead {
   color: var(--white);
 }
 
+#callback .levus-parallax {
+  background-repeat: no-repeat !important;
+  background-position-x: center !important;
+  background: url('https://kalvis.levus.info/templates/duncan/images/callback.jpg');
+}
+
+/* текст зліва */
+#callback-text {
+  margin: 10px;
+  text-align: center;
+}
+
+@media(max-width: 991px) {
+  #callback-text {
+    text-align: right;
+  }
+}
+
+@media(max-width: 776px) {
+  #callback-text {
+    text-align: center;
+  }
+}
+
 #callback h2 {
   font-size: 42px;
   font-weight: bold;
@@ -218,6 +248,25 @@ p.lead {
   color: var(--white);
 }
 
+
+/* кнопки справа */
+#callback-button {
+  margin: 10px;
+  text-align: center;
+}
+
+@media(max-width: 991px) {
+  #callback-button {
+    text-align: left;
+  }
+}
+
+@media(max-width: 776px) {
+  #callback-button {
+    text-align: center;
+  }
+}
+
 #callback-button a {
   font-size: 14px;
   display: inline-block;
@@ -226,7 +275,7 @@ p.lead {
   color: var(--light);
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  margin: 0 10px;
+  margin: 5px;
   letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
@@ -241,6 +290,21 @@ p.lead {
 /* пiдвал */
 #footer {
   background: var(--dark-footer);
+}
+
+#footer p {
+  color: var(--light);
+}
+
+#footer h4 {
+  font-family: 'Nunito', sans-serif;
+  color: var(--light-red);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
 
 /* цопірайти */
