@@ -106,13 +106,78 @@ p.lead {
   line-height: 22px;
 }
 
-/**/
-#logo{
+/* 2 типи логотипа */
+#logo {
   text-decoration: none;
   background: url('../images/logo.png') no-repeat;
   width: 180px;
   height: 58px;
   display: block;
+}
+
+/* кнопка пошуку */
+#search {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url('data:image/png;base64,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') center center no-repeat;
+  cursor: pointer;
+}
+
+/* кнопка дзвінка */
+#phone {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC4HpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHja7ZdNktwgDIX3nCJHQBJCcBwwUJUb5Ph5YNr9M5NUZZJFFm3aBtT4SegDZtr1H9+H+4aLsrALainmGD2ukEPmgkby53XW5MN67o6/NZ7s7vqCYRLUcnZj3+ML7Hp/wcK212e7s2PrpC1El/C6ZHqe7baD3ELCp5123+X9QokP09k3H1t2i7/2gyEZTaGHHHEXEr+efHqS8y64Fc/5LeKSjLains/4MX/OP+bwJYFX6yV//haZ3NNxCt2mFV/ytO2kL3a53PBTRMSXZ36MyORy8SF/Y7Q0Rj9nV0J0SFfck7pNZbUwsCKdsl6LKIZb0bZVMkryxR+g1jDV6nxFJxMjp4MCNSo0qK/6oAMhBu5sqJkPlmVLYpz5kIkgzEKDzYFGkwROB8gJzHzFQstvnv7gLMFzI4xkghgYPxf3avhqeRIaYy5zIp+uXCEunusLYUxy84lRAEJj51RXfsmdlX+9JlgBQV1pTphg8fWUqEr3tSWLs3h1GBr8uV/I2hZAiuBbEQwJCPhIohTJG7MRIY8JfAoiZwlcQYDUKTdEyUEkAk7i6RvvGK2xrHyacbwABDaHGNBguwBWCBoi9lvCEipORYOqRjVNmrVEiSFqjNHiPKeKiQVTi2aWLFtJkkLSFJOllHIqmbPgGFOXY7accs6lwGkJBVoF4wsMlavUULXGajXVXMuB5XOEQ4942JGOfJTGTRqOANdis5ZabqVTx1LqoWuP3XrquZeBtTZkhKEjDhtp5FEuapvqM7VXcr+nRpsaL1BznN2pwWx2k6B5nOhkBmIcCMRtEsCC5snMJwqBJ7nJzGcWJ6KMKHXCaTSJgWDoxDroYncn90tuDtn9U278GTk30f0Lcm6ieyD3kdsn1FpZx60sQHMXIqc4IQXbD4MKJ3zw5+RrtfN/KfAWegu9hd5Cb6G30FvovxKSgX8eMn5O/QTXspG01U8ghwAAAYRpQ0NQSUNDIHByb2ZpbGUAACiRfZE9SMNAHMVfW4tSKh3sIOIQoTpZEBV11CoUoUKoFVp1MLn0C5o0JCkujoJrwcGPxaqDi7OuDq6CIPgB4uTopOgiJf4vKbSI8eC4H+/uPe7eAf5Ghalm1xigapaRTiaEbG5V6H5FECFEMIRpiZn6nCim4Dm+7uHj612cZ3mf+3P0KnmTAT6BeJbphkW8QTy1aemc94mjrCQpxOfEowZdkPiR67LLb5yLDvt5ZtTIpOeJo8RCsYPlDmYlQyWeJI4pqkb5/qzLCuctzmqlxlr35C8M57WVZa7THEQSi1iCCAEyaiijAgtxWjVSTKRpP+HhH3D8IrlkcpXByLGAKlRIjh/8D353axYmxt2kcAIIvtj2xzDQvQs067b9fWzbzRMg8AxcaW1/tQHMfJJeb2uxIyCyDVxctzV5D7jcAfqfdMmQHClA018oAO9n9E05oO8WCK25vbX2cfoAZKir1A1wcAiMFCl73ePdPZ29/Xum1d8PkJ9ysydvRFoAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfkBQoQMzrIHYPSAAAAvUlEQVQ4y63TvWpCQRDF8bkS+3RWIVZWsZC0Vr6DqfJC8Rl8DME2kipVBLHzIYK18LO5lyyLH3eNBw7szMKfPTNshfiPOlndj4hJEQGNX7HHAaOkf9FpsfSnL1RtAGmEp+Q8johp6Qy+s7tu6QyGdX7Yto2QN2Y14BeDWwBdrGrIDr1SQOAR6wQyqOO84y2Pdo7cw08SZ5uteHQN0Lzk02kdMLkGCDzgI9lOoz2e2wAav2CODRZphOrev7FYR1OBDZJFGpUeAAAAAElFTkSuQmCC') center center no-repeat;
+  cursor: pointer;
+}
+
+/* кнопка мов*/
+#lang {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  color: var(--light);
+  border: 1px solid var(--light);
+  padding: 0 2px;
+  cursor: pointer;
+  position: relative;
+
+  -webkit-transition: border-color .5s;
+  transition: border-color .5s;
+}
+
+#lang:hover {
+  border-color: var(--red);
+}
+
+#lang ul {
+  display: none;
+  width: 30px;
+  padding: 5px;
+  text-align: center;
+  background: var(--dark);
+  position: absolute;
+  right: -5px;
+  top: 105%;
+}
+
+#lang:hover ul {
+  display: block;
+}
+
+#lang li{
+  display: block;
+}
+
+#lang a{
+  color: var(--light);
+  text-decoration: none;
+}
+
+#lang a:hover{
+  color: var(--red);
 }
 
 /* 6 blocks */

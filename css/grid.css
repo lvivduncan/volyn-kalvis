@@ -10,7 +10,7 @@
   z-index: 12;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 180px 890px 35px 35px 1fr;
+  grid-template-columns: 1fr 180px 890px repeat(3, 25px) 1fr;
   align-items: center;
 }
 
@@ -19,24 +19,54 @@
   content: '';
 }
 
-@media(max-width: 1200px){
+@media(max-width: 1240px){
   #header{
-    grid-template-columns: 180px auto 35px 35px;
+    grid-template-columns: 1fr;
+    /* padding: 0 10px; */
   }
   #header::after,
   #header::before{
     display: none;
   }
+/* елементи отримують абсолютне позиціонування */
+  #logo,
+  #search,
+  #phone,
+  #lang{
+    position: absolute!important;
+    z-index: 9;
+  }
+
+  #logo{
+    top: 10px;
+    left: 50%;
+    margin-left: -90px;
+  }
+  
+  #search{
+    top: 32px;
+    left: 10px;
+  }
+
+  #phone{
+    top: 32px;
+    left: 40px;
+  }
+  
+  #lang{
+    top: 32px;
+    left: 70px;
+  }
 }
 
-#logo{}
-
-#nav{}
-
-#search{}
-
-#lang{}
-
+@media(max-width: 420px){
+  #logo{
+    background: url('../images/logo-mobile.png')!important;
+    background-size: 100px!important;
+    width: 100px!important;
+    margin-left: -50px;
+  }
+}
 
 /* слайдер */
 #levus-slider{
@@ -71,7 +101,7 @@
 
 #welcome article{
   height: 350px;
-  padding: 60px 0 10px;
+  padding: 60px 10px 10px;
   text-align: center;
 }
 
