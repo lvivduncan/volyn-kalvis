@@ -372,14 +372,21 @@ p.lead {
   margin-bottom: 20px;
 }
 
+#footer li {
+  color: var(--light);
+}
+
+#footer li a{
+  color: var(--light);
+}
+
+#footer li a:hover{
+  text-decoration: none;
+}
+
 /* цопірайти */
 #copyright {
   background: var(--dark-copyright);
 }
-
-
-
-
-
 
 /**/
