@@ -76,6 +76,11 @@ h6,
   font-weight: 500;
 }
 
+/* спеціальний клас-обгортка для малих екранів */
+.levus-table-wrapper {
+  overflow-x: auto;
+}
+
 /* срана таблиця*/
 table {
   width: 100%;
@@ -86,14 +91,6 @@ tr,
 td {
   padding: 5px;
   border: 1px solid var(--gray);
-}
-
-/* спеціальний клас-обгортка для малих екранів */
-.levus-table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 /* заголовок блоку */
@@ -466,6 +463,14 @@ inner page
   border-left: 2px dashed var(--light-red);
 }
 
+@media(max-width: 776px) {
+  #item-delivery {
+    padding: 15px 0 0;
+    border: none;
+    border-top: 2px dashed var(--gray);
+  }
+}
+
 #item-delivery h1,
 #item-delivery h2,
 #item-delivery h3,
@@ -485,6 +490,54 @@ inner page
 #item-form {
   padding: 20px 0 0 0;
   border-top: 2px dashed var(--gray);
+}
+
+#form label:nth-child(1) {
+  display: block;
+}
+
+#form label:nth-child(2) {
+  display: block;
+}
+
+#form label:nth-child(3) {
+  display: block;
+}
+
+#form label:nth-child(4) {
+  display: block;
+}
+
+#form p {
+  display: inline-block;
+}
+
+#form input[type="text"],
+#form textarea{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  border: 1px solid var(--opacity);
+  font-size: 12px;
+}
+
+#form textarea{
+  height: 120px;
+  resize: none;
+}
+
+#form input[type="text"]:focus,
+#form textarea:focus{
+  border-color: var(--black);
+}
+
+#form input[type="submit"]{
+  padding: 5px 10px;
+  cursor: pointer;
+  background: var(--red);
+  color: var(--light);
+  border: none;
 }
 
 /* ///////

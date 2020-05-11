@@ -285,8 +285,7 @@ inner page
   margin: 20px auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 400px);
-  /* grid-template-rows: repeat(4, auto); */
+  grid-template-columns: repeat(3, 33.3333%);
   grid-template-areas:
     'item-img item-desc item-delivery'
     'item-view item-view item-view'
@@ -298,6 +297,19 @@ inner page
 @media(max-width: 1240px){
   #item{
     width: 95%;
+  }
+}
+
+@media(max-width: 776px){
+  #item{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'item-img'
+    'item-desc'
+    'item-delivery'
+    'item-view'
+    'item-table'
+    'item-form';
   }
 }
 
@@ -317,6 +329,12 @@ inner page
   margin: 0 0 0 15px;
 }
 
+@media(max-width: 776px){
+  #item-delivery{
+    margin: 15px 0 0;
+  }
+}
+
 /* текст по центру */
 #item-view {
   grid-area: item-view;
@@ -331,6 +349,53 @@ inner page
 /* форма внизу */
 #item-form {
   grid-area: item-form;
+}
+
+/* блоки на всю ширину */
+#item-view,
+#item-table,
+#item-form {
+  /* для таблиць */
+  overflow: hidden;
+}
+
+/* форма */
+#form{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'form-label-1 form-label-2 form-label-3' 
+    'form-label-4 form-label-4 form-label-4'
+    'form-input form-input form-input';
+  grid-gap: 10px;
+}
+
+@media(max-width: 776px){
+  #form{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      'form-label-1'
+      'form-label-2'
+      'form-label-3'
+      'form-label-4'
+      'form-input'
+  }
+}
+
+#form label:nth-child(1){
+  grid-area: form-label-1;
+}
+#form label:nth-child(2){
+  grid-area: form-label-2;
+}
+#form label:nth-child(3){
+  grid-area: form-label-3;
+}
+#form label:nth-child(4){
+  grid-area: form-label-4;
+}
+#form p{
+  grid-area: form-input;
 }
 
 /* основний вміст сторінки */
