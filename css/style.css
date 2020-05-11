@@ -29,6 +29,7 @@
   --light: #f1eded;
   --white: #fff;
   --light-gray: #f1eded;
+  --gray: #565656;
   --red: #920d12;
   --dark-red: #5a070c;
   --light-red: #dc3545;
@@ -389,16 +390,9 @@ inner page
 
 #breadcrumbs li:first-child::before {
   content: "";
-  padding: 0;
+  /* padding: 0; */
   display: none;
 }
-
-/* .breadcrumb ul li+li:before, .breadcrumb ol li+li:before {
-  content: "\e95a";
-  font-family: "inspiro-icons";
-  margin: 0 5px;
-  background-color: transparent;
-} */
 
 #breadcrumbs a {
   color: var(--dark);
@@ -408,6 +402,77 @@ inner page
   color: var(--red);
 }
 
+/* ///////
+blank page
+/////// */
+
+#main{
+  background: var(--white);
+}
+
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5{
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#main h1{
+  font-size: 40px;
+}
+
+#main h2{
+  font-size: 32px;
+}
+
+#main h3{
+  font-size: 26px;
+}
+
+#main h4{
+  font-size: 18px;
+}
+
+/* ///////
+items page
+/////// */
+
+/* перелік елементів, наприклад, новин */
+#catalog article header{
+  min-height: 70px;
+  display: flex;
+  align-items: flex-end;
+}
+
+#catalog article header a{
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 20px;
+  display: block;
+  margin: 0 0 10px;
+
+  transition: color .5s;
+}
+
+#catalog article header a:hover{
+  color: var(--red);
+}
+
+#catalog article figure{
+  background: var(--white);
+}
+
+#catalog article figure img{
+  width: 100%!important;
+}
+
+#catalog article figcaption{
+  padding: 5px 10px;
+}
 
 /* пiдвал */
 #footer {

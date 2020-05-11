@@ -25,7 +25,6 @@ body{
 @media(max-width: 1240px){
   #header{
     grid-template-columns: 1fr;
-    /* padding: 0 10px; */
   }
   #header::after,
   #header::before{
@@ -255,10 +254,45 @@ inner page
   }
 }
 
-
 /* основний вміст сторінки */
 #main{
+  margin: 20px auto;
+  width: 1200px;
+  padding: 60px 20px;
+}
 
+@media(max-width: 1240px){
+  #main{
+    width: 95%;
+  }
+}
+
+/* вміст сторінки з переліком */
+#catalog{
+  margin: 20px auto;
+  width: 1200px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+@media(max-width: 1240px){
+  #catalog{
+    width: 95%;
+  }
+}
+
+@media(max-width: 776px){
+  #catalog{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 420px){
+  #catalog{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* пiдвал */
