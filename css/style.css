@@ -9,6 +9,9 @@
 /* include slider */
 @import url('./slider.css');
 
+/* include slider */
+@import url('./modal.css');
+
 /* style */
 *,
 ::after,
@@ -23,9 +26,10 @@
   --dark: #1f1f1f;
   --dark-footer: #181818;
   --dark-copyright: #1e1e1e;
-  --red: #920d12;
   --light: #f1eded;
   --white: #fff;
+  --light-gray: #f1eded;
+  --red: #920d12;
   --dark-red: #5a070c;
   --light-red: #dc3545;
   --light-red-2: #d0181e;
@@ -37,6 +41,7 @@ body {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  background: var(--light-gray);
 }
 
 p {
@@ -67,6 +72,7 @@ h6,
   color: var(--dark);
   margin: 0;
   letter-spacing: 1px;
+  font-weight: 500;
 }
 
 /* заголовок блоку */
@@ -167,18 +173,22 @@ p.lead {
   display: block;
 }
 
-#lang li{
+#lang li {
   display: block;
 }
 
-#lang a{
+#lang a {
   color: var(--light);
   text-decoration: none;
 }
 
-#lang a:hover{
+#lang a:hover {
   color: var(--red);
 }
+
+/* ///////
+index page
+/////// */
 
 /* 6 blocks */
 #welcome article:nth-child(1) {
@@ -352,6 +362,53 @@ p.lead {
   background: var(--red);
 }
 
+/* ///////
+inner page
+/////// */
+
+/* хлібні крихти */
+#breadcrumbs {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0;
+}
+
+#breadcrumbs li {
+  display: inline;
+  position: relative;
+  opacity: .8;
+}
+
+#breadcrumbs li::before {
+  content: "/";
+  display: inline-block;
+  padding: 0 10px;
+  color: var(--gray);
+}
+
+#breadcrumbs li:first-child::before {
+  content: "";
+  padding: 0;
+  display: none;
+}
+
+/* .breadcrumb ul li+li:before, .breadcrumb ol li+li:before {
+  content: "\e95a";
+  font-family: "inspiro-icons";
+  margin: 0 5px;
+  background-color: transparent;
+} */
+
+#breadcrumbs a {
+  color: var(--dark);
+}
+
+#breadcrumbs a:hover {
+  color: var(--red);
+}
+
+
 /* пiдвал */
 #footer {
   background: var(--dark-footer);
@@ -376,11 +433,11 @@ p.lead {
   color: var(--light);
 }
 
-#footer li a{
+#footer li a {
   color: var(--light);
 }
 
-#footer li a:hover{
+#footer li a:hover {
   text-decoration: none;
 }
 
@@ -390,3 +447,20 @@ p.lead {
 }
 
 /**/
+.overlay {
+  position: fixed;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity .35s, visibility .35s, height .35s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

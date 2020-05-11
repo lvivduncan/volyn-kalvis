@@ -1,0 +1,2 @@
+// https://github.com/lvivduncan/levus-parallax
+{const e=document.querySelector(".levus-wrapper").offsetTop,t=document.querySelectorAll(".levus-wrapper .levus-parallax");window.addEventListener("scroll",()=>{const o=document.documentElement.clientHeight,r=window.pageYOffset;t.forEach(t=>{o+r>e?t.style.backgroundPositionY=`-${(o+r-e)/4}px`:t.removeAttribute("style")})})}

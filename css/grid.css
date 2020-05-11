@@ -1,4 +1,7 @@
 /* grid */
+body{
+  padding: 80px 0 0;
+}
 
 /* фіксоване меню */
 #header{
@@ -10,7 +13,7 @@
   z-index: 12;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 180px 890px repeat(3, 25px) 1fr;
+  grid-template-columns: 1fr 180px 935px repeat(3, 30px) 1fr;
   align-items: center;
 }
 
@@ -68,10 +71,9 @@
   }
 }
 
-/* слайдер */
-#levus-slider{
-  margin-top: 80px;
-}
+/* //////
+home page
+////// */
 
 /* 6 блоків червоного кольору */
 #welcome{
@@ -115,14 +117,25 @@
 /* про нас на головній */
 #about{
   padding: 80px 0;
+  /* width: 1140px;
+  margin: auto; */
+  background: var(--white);
+}
+
+#about article{
   width: 1140px;
   margin: auto;
 }
 
 @media(max-width: 1200px){
-  #about{
+  #about article{
     width: 95%;
   }
+}
+
+#about::after,
+#about::before{
+  content: '';
 }
 
 /* блок 4 новин на головній */
@@ -204,6 +217,48 @@
   #callback .levus-parallax::before{
     display: none;
   }
+}
+
+/* ///////
+inner page
+/////// */
+
+/* заголовок (назва сторінки) */
+#page-title{
+  padding: 40px 0 20px;
+  width: 1200px;
+  margin: auto;
+}
+
+@media(max-width: 1240px){
+  #page-title{
+    width: 95%;
+  }
+}
+
+#page-title h1{
+  margin-bottom: 20px;  
+  font-size: 36px;
+  line-height: 1;
+}
+
+/* хлібні крихти */
+#breadcrumbs{
+  width: 1200px;
+  margin: 10px auto;
+  display: block;
+}
+
+@media(max-width: 1240px){
+  #breadcrumbs{
+    width: 95%;
+  }
+}
+
+
+/* основний вміст сторінки */
+#main{
+
 }
 
 /* пiдвал */
