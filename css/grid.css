@@ -1,14 +1,14 @@
 /* grid */
-body{
+body {
   padding: 80px 0 0;
 }
 
 /* фіксоване меню */
-#header{
+#header {
   height: 81px;
   background: var(--dark);
   position: fixed;
-  top:-1px;
+  top: -1px;
   left: 0;
   z-index: 12;
   width: 100%;
@@ -18,54 +18,56 @@ body{
 }
 
 #header::after,
-#header::before{
+#header::before {
   content: '';
 }
 
-@media(max-width: 1240px){
-  #header{
+@media(max-width: 1240px) {
+  #header {
     grid-template-columns: 1fr;
   }
+
   #header::after,
-  #header::before{
+  #header::before {
     display: none;
   }
-/* елементи отримують абсолютне позиціонування */
+
+  /* елементи отримують абсолютне позиціонування */
   #logo,
   #search,
   #phone,
-  #lang{
-    position: absolute!important;
+  #lang {
+    position: absolute !important;
     z-index: 9;
   }
 
-  #logo{
+  #logo {
     top: 10px;
     left: 50%;
     margin-left: -90px;
   }
-  
-  #search{
+
+  #search {
     top: 32px;
     left: 10px;
   }
 
-  #phone{
+  #phone {
     top: 32px;
     left: 40px;
   }
-  
-  #lang{
+
+  #lang {
     top: 32px;
     left: 70px;
   }
 }
 
-@media(max-width: 420px){
-  #logo{
-    background: url('../images/logo-mobile.png')!important;
-    background-size: 100px!important;
-    width: 100px!important;
+@media(max-width: 420px) {
+  #logo {
+    background: url('../images/logo-mobile.png') !important;
+    background-size: 100px !important;
+    width: 100px !important;
     margin-left: -50px;
   }
 }
@@ -75,75 +77,73 @@ home page
 ////// */
 
 /* 6 блоків червоного кольору */
-#welcome{
+#welcome {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   width: 100%;
 }
 
-@media(max-width: 991px){
-  #welcome{
+@media(max-width: 991px) {
+  #welcome {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: row;
   }
 }
 
-@media(max-width: 776px){
-  #welcome{
+@media(max-width: 776px) {
+  #welcome {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width: 420px){
-  #welcome{
+@media(max-width: 420px) {
+  #welcome {
     grid-template-columns: 1fr;
   }
 }
 
-#welcome article{
+#welcome article {
   height: 350px;
   padding: 60px 10px 10px;
   text-align: center;
 }
 
-@media(max-width: 776px){
-  #welcome article{
+@media(max-width: 776px) {
+  #welcome article {
     height: 260px;
     padding: 30px 10px 10px;
   }
 }
 
 /* про нас на головній */
-#about{
+#about {
   padding: 80px 0;
-  /* width: 1140px;
-  margin: auto; */
   background: var(--white);
 }
 
-#about article{
+#about article {
   width: 1140px;
   margin: auto;
 }
 
-@media(max-width: 1200px){
-  #about article{
+@media(max-width: 1200px) {
+  #about article {
     width: 95%;
   }
 }
 
 #about::after,
-#about::before{
+#about::before {
   content: '';
 }
 
 /* блок 4 новин на головній */
-#home-news{
+#home-news {
   padding: 80px 0;
 }
 
 /* 4 news */
-#home-news > section{
+#home-news>section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
@@ -151,36 +151,36 @@ home page
   margin: auto;
 }
 
-@media(max-width: 1200px){
-  #home-news > section{
+@media(max-width: 1200px) {
+  #home-news>section {
     width: 95%;
   }
 }
 
-@media(max-width: 991px){
-  #home-news > section{
+@media(max-width: 991px) {
+  #home-news>section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width: 460px){
-  #home-news > section{
+@media(max-width: 460px) {
+  #home-news>section {
     grid-template-columns: 1fr;
   }
 }
 
 /* колбек на головній  */
-#callback{
+#callback {
   height: 200px;
 }
 
-@media(max-width: 460px){
-  #callback{
+@media(max-width: 460px) {
+  #callback {
     height: auto;
   }
 }
 
-#callback .levus-parallax{
+#callback .levus-parallax {
   display: grid;
   grid-template-columns: 1fr repeat(2, 600px) 1fr;
   align-items: center;
@@ -188,32 +188,33 @@ home page
   height: 200px;
 }
 
-@media(max-width: 1240px){
-  #callback .levus-parallax{
+@media(max-width: 1240px) {
+  #callback .levus-parallax {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width: 776px){
-  #callback .levus-parallax{
+@media(max-width: 776px) {
+  #callback .levus-parallax {
     grid-template-columns: 1fr;
   }
 }
 
-@media(max-width: 460px){
-  #callback .levus-parallax{
+@media(max-width: 460px) {
+  #callback .levus-parallax {
     height: auto;
   }
 }
 
 #callback .levus-parallax::after,
-#callback .levus-parallax::before{
+#callback .levus-parallax::before {
   content: '';
 }
 
-@media(max-width: 1240px){
+@media(max-width: 1240px) {
+
   #callback .levus-parallax::after,
-  #callback .levus-parallax::before{
+  #callback .levus-parallax::before {
     display: none;
   }
 }
@@ -223,52 +224,130 @@ inner page
 /////// */
 
 /* заголовок (назва сторінки) */
-#page-title{
-  padding: 40px 0 20px;
+#page-title {
   width: 1200px;
-  margin: auto;
+  margin: 40px auto 20px;
 }
 
-@media(max-width: 1240px){
-  #page-title{
+@media(max-width: 1240px) {
+  #page-title {
     width: 95%;
   }
 }
 
-#page-title h1{
-  margin-bottom: 20px;  
+#page-title h1 {
+  margin-bottom: 20px;
   font-size: 36px;
   line-height: 1;
 }
 
 /* хлібні крихти */
-#breadcrumbs{
+#breadcrumbs {
   width: 1200px;
   margin: 10px auto;
   display: block;
 }
 
-@media(max-width: 1240px){
-  #breadcrumbs{
+@media(max-width: 1240px) {
+  #breadcrumbs {
     width: 95%;
   }
 }
 
+/* сторінка товару -- хедер з фоновою картинкою */
+#item-header {
+  text-align: center;
+  color: var(--white);
+}
+
+#item-header .levus-parallax {
+  padding: 50px 0;
+  background-repeat: no-repeat !important;
+  background-position-x: center !important;
+  background: url('../images/header.jpg');
+}
+
+#item-header #page-title {
+  margin: auto;
+}
+
+#item-header #page-title h1 {
+  color: var(--white);
+  font-size: 44px;
+  line-height: 56px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* вміст сторінки товару */
+#item {
+  width: 1200px;
+  margin: 20px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  /* grid-template-rows: repeat(4, auto); */
+  grid-template-areas:
+    'item-img item-desc item-delivery'
+    'item-view item-view item-view'
+    'item-table item-table item-table'
+    'item-form item-form item-form';
+  grid-gap: 10px;
+}
+
+@media(max-width: 1240px){
+  #item{
+    width: 95%;
+  }
+}
+
+/* картинка вгорі зліва */
+#item-img {
+  grid-area: item-img;
+}
+
+/* текст вгорі в середині */
+#item-desc {
+  grid-area: item-desc;
+}
+
+/* доставка вгорі справа*/
+#item-delivery {
+  grid-area: item-delivery;
+  margin: 0 0 0 15px;
+}
+
+/* текст по центру */
+#item-view {
+  grid-area: item-view;
+  margin: 20px 0 0 0;
+}
+
+/* текст по центру */
+#item-table {
+  grid-area: item-table;
+}
+
+/* форма внизу */
+#item-form {
+  grid-area: item-form;
+}
+
 /* основний вміст сторінки */
-#main{
+#main {
   margin: 20px auto;
   width: 1200px;
   padding: 60px 20px;
 }
 
-@media(max-width: 1240px){
-  #main{
+@media(max-width: 1240px) {
+  #main {
     width: 95%;
   }
 }
 
 /* вміст сторінки з переліком */
-#catalog{
+#catalog {
   margin: 20px auto;
   width: 1200px;
   padding: 10px 0;
@@ -277,64 +356,65 @@ inner page
   grid-gap: 20px;
 }
 
-@media(max-width: 1240px){
-  #catalog{
+@media(max-width: 1240px) {
+  #catalog {
     width: 95%;
   }
 }
 
-@media(max-width: 776px){
-  #catalog{
+@media(max-width: 776px) {
+  #catalog {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width: 420px){
-  #catalog{
+@media(max-width: 420px) {
+  #catalog {
     grid-template-columns: 1fr;
   }
 }
 
 /* пiдвал */
-#footer{
+#footer {
   padding: 40px 0;
   display: grid;
   grid-template-columns: 1fr repeat(4, 300px) 1fr;
 }
 
-@media(max-width: 1240px){
-  #footer{
+@media(max-width: 1240px) {
+  #footer {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media(max-width: 776px){
-  #footer{
+@media(max-width: 776px) {
+  #footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width: 460px){
-  #footer{
+@media(max-width: 460px) {
+  #footer {
     grid-template-columns: 1fr;
     padding: 30px 10px;
   }
 }
 
 #footer::after,
-#footer::before{
+#footer::before {
   content: '';
 }
 
-@media(max-width: 1240px){
+@media(max-width: 1240px) {
+
   #footer::after,
-  #footer::before{
+  #footer::before {
     display: none;
   }
 }
 
 /* цопірайти */
-#copyright{
+#copyright {
   padding: 30px 0;
   text-align: center;
 }

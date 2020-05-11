@@ -35,7 +35,7 @@
   --light-red: #dc3545;
   --light-red-2: #d0181e;
   --light-red-3: #b5161b;
-
+  --opacity: rgba(0,0,0,.5);
 }
 
 body {
@@ -74,6 +74,17 @@ h6,
   margin: 0;
   letter-spacing: 1px;
   font-weight: 500;
+}
+
+/* срана таблиця*/
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr,td{
+  padding: 5px;
+  border: 1px solid var(--gray);
 }
 
 /* заголовок блоку */
@@ -292,7 +303,7 @@ index page
 #callback .levus-parallax {
   background-repeat: no-repeat !important;
   background-position-x: center !important;
-  background: url('https://kalvis.levus.info/templates/duncan/images/callback.jpg');
+  background: url('../images/callback.jpg');
 }
 
 /* текст зліва */
@@ -390,16 +401,81 @@ inner page
 
 #breadcrumbs li:first-child::before {
   content: "";
-  /* padding: 0; */
   display: none;
 }
 
 #breadcrumbs a {
   color: var(--dark);
+  text-decoration: underline;
 }
 
 #breadcrumbs a:hover {
   color: var(--red);
+  text-decoration: none;
+}
+
+/* сторінка товару */
+#item-header{
+  position: relative;
+}
+
+/* dark cover */
+#item-header::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--opacity);
+  z-index: 1;
+}
+
+#item-header #page-title,
+#item-header #breadcrumbs{
+  position: relative;
+  z-index: 2;
+}
+
+#item-header #breadcrumbs a{
+  color: var(--white);
+}
+
+#item-header #breadcrumbs li::before {
+  color: var(--white);
+}
+
+/* стилі сторінки товару */
+#item ul,
+#item ol{
+  margin: 10px 10px 10px 40px;
+}
+
+/* доставка вгорі справа*/
+#item-delivery {
+  padding: 0 0 0 15px;
+  border-left: 2px dashed var(--light-red);
+}
+
+#item-delivery h1,
+#item-delivery h2,
+#item-delivery h3,
+#item-delivery h4{
+  color: var(--light-red);
+  margin: 0 0 10px;
+}
+
+/**/
+#item-desc p{
+  margin: 0 0 5px 5px;
+}
+
+/* блоки на всю ширину */
+#item-view,
+#item-table,
+#item-form{
+  padding: 20px 0 0 0;
+  border-top: 2px dashed var(--gray);
 }
 
 /* ///////
