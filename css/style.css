@@ -35,7 +35,7 @@
   --light-red: #dc3545;
   --light-red-2: #d0181e;
   --light-red-3: #b5161b;
-  --opacity: rgba(0,0,0,.5);
+  --opacity: rgba(0, 0, 0, .5);
 }
 
 body {
@@ -77,14 +77,23 @@ h6,
 }
 
 /* срана таблиця*/
-table{
+table {
   width: 100%;
   border-collapse: collapse;
 }
 
-tr,td{
+tr,
+td {
   padding: 5px;
   border: 1px solid var(--gray);
+}
+
+/* спеціальний клас-обгортка для малих екранів */
+.levus-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 /* заголовок блоку */
@@ -415,12 +424,12 @@ inner page
 }
 
 /* сторінка товару */
-#item-header{
+#item-header {
   position: relative;
 }
 
 /* dark cover */
-#item-header::after{
+#item-header::after {
   content: '';
   position: absolute;
   top: 0;
@@ -432,12 +441,12 @@ inner page
 }
 
 #item-header #page-title,
-#item-header #breadcrumbs{
+#item-header #breadcrumbs {
   position: relative;
   z-index: 2;
 }
 
-#item-header #breadcrumbs a{
+#item-header #breadcrumbs a {
   color: var(--white);
 }
 
@@ -447,7 +456,7 @@ inner page
 
 /* стилі сторінки товару */
 #item ul,
-#item ol{
+#item ol {
   margin: 10px 10px 10px 40px;
 }
 
@@ -460,20 +469,20 @@ inner page
 #item-delivery h1,
 #item-delivery h2,
 #item-delivery h3,
-#item-delivery h4{
+#item-delivery h4 {
   color: var(--light-red);
   margin: 0 0 10px;
 }
 
 /**/
-#item-desc p{
+#item-desc p {
   margin: 0 0 5px 5px;
 }
 
 /* блоки на всю ширину */
 #item-view,
 #item-table,
-#item-form{
+#item-form {
   padding: 20px 0 0 0;
   border-top: 2px dashed var(--gray);
 }
@@ -482,7 +491,7 @@ inner page
 blank page
 /////// */
 
-#main{
+#main {
   background: var(--white);
 }
 
@@ -490,25 +499,25 @@ blank page
 #main h2,
 #main h3,
 #main h4,
-#main h5{
+#main h5 {
   margin-bottom: 16px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-#main h1{
+#main h1 {
   font-size: 40px;
 }
 
-#main h2{
+#main h2 {
   font-size: 32px;
 }
 
-#main h3{
+#main h3 {
   font-size: 26px;
 }
 
-#main h4{
+#main h4 {
   font-size: 18px;
 }
 
@@ -517,13 +526,13 @@ items page
 /////// */
 
 /* перелік елементів, наприклад, новин */
-#catalog article header{
+#catalog article header {
   min-height: 70px;
   display: flex;
   align-items: flex-end;
 }
 
-#catalog article header a{
+#catalog article header a {
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
   color: var(--gray);
@@ -534,19 +543,19 @@ items page
   transition: color .5s;
 }
 
-#catalog article header a:hover{
+#catalog article header a:hover {
   color: var(--red);
 }
 
-#catalog article figure{
+#catalog article figure {
   background: var(--white);
 }
 
-#catalog article figure img{
-  width: 100%!important;
+#catalog article figure img {
+  width: 100% !important;
 }
 
-#catalog article figcaption{
+#catalog article figcaption {
   padding: 5px 10px;
 }
 
