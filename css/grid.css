@@ -180,7 +180,7 @@ home page
   }
 }
 
-#callback .levus-parallax {
+#callback article{
   display: grid;
   grid-template-columns: 1fr repeat(2, 600px) 1fr;
   align-items: center;
@@ -189,32 +189,32 @@ home page
 }
 
 @media(max-width: 1240px) {
-  #callback .levus-parallax {
+  #callback article {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media(max-width: 776px) {
-  #callback .levus-parallax {
+  #callback article {
     grid-template-columns: 1fr;
   }
 }
 
 @media(max-width: 460px) {
-  #callback .levus-parallax {
+  #callback article {
     height: auto;
   }
 }
 
-#callback .levus-parallax::after,
-#callback .levus-parallax::before {
+#callback article::after,
+#callback article::before {
   content: '';
 }
 
 @media(max-width: 1240px) {
 
-  #callback .levus-parallax::after,
-  #callback .levus-parallax::before {
+  #callback article::after,
+  #callback article::before {
     display: none;
   }
 }
@@ -436,6 +436,24 @@ inner page
 @media(max-width: 420px) {
   #catalog {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ////////
+subcategory 
+//////// */
+
+#subcategory-image{
+  width: 50%;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+@media(max-width: 776px){
+  #subcategory-image{
+    width: 100%;
+    float: none;
+    margin: 0 0 20px;
   }
 }
 

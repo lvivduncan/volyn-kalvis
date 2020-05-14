@@ -85,6 +85,7 @@ h6,
 table {
   width: 100%;
   border-collapse: collapse;
+  margin: 10px 0;
 }
 
 tr,
@@ -306,7 +307,7 @@ index page
   color: var(--white);
 }
 
-#callback .levus-parallax {
+#callback > article {
   background-repeat: no-repeat !important;
   background-position-x: center !important;
   background: url('../images/callback.jpg');
@@ -610,6 +611,20 @@ items page
 
 #catalog article figcaption {
   padding: 5px 10px;
+}
+
+/* ////////
+subcategory 
+//////// */
+
+#main ul,
+#main ul{
+  margin: 5px 0 5px;
+  overflow: hidden;
+}
+
+#main li{
+  margin: 0 0 0 30px;
 }
 
 /* пiдвал */
