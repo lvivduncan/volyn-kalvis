@@ -411,6 +411,64 @@ inner page
   }
 }
 
+/* ////////
+single page
+//////// */
+
+#main-content{
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'main-content-1 main-content-2 main-content-3';
+  grid-gap: 10px;
+}
+
+@media(max-width: 991px){
+  #main-content{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'main-content-1 main-content-1' 
+      'main-content-2 main-content-3' 
+  }
+}
+
+@media(max-width: 640px){
+  #main-content{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'main-content-1' 
+      'main-content-2' 
+      'main-content-3' 
+  }
+}
+
+#main-content section:nth-of-type(1){
+  grid-area: main-content-1;
+}
+#main-content section:nth-of-type(2){
+  grid-area: main-content-2;
+}
+#main-content section:nth-of-type(3){
+  grid-area: main-content-3;
+}
+
+
+/* 3 фото внизу сторінки */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 10px 0;
+}
+
+@media(max-width: 776px){
+  .gallery{
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* вміст сторінки з переліком */
 #catalog {
   margin: 20px auto;
@@ -457,6 +515,39 @@ subcategory
   }
 }
 
+/* //////////
+all news page 
+////////// */
+
+/* блок 4 новин на головній */
+#news {
+  padding: 80px 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  width: 1200px;
+  margin: auto;
+}
+
+@media(max-width: 1240px) {
+  #news {
+    width: 95%;
+  }
+}
+
+@media(max-width: 991px) {
+  #news {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 460px) {
+  #news {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* пiдвал */
 #footer {
   padding: 40px 0;
@@ -467,6 +558,12 @@ subcategory
 @media(max-width: 1240px) {
   #footer {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media(max-width: 1240px) {
+  #footer div{
+    padding: 0 10px;
   }
 }
 
