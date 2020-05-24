@@ -655,19 +655,6 @@ input[type="submit"] {
   margin: 0 0 20px;
 }
 
-.col-5 input[type="text"],
-.col-4 input[type="text"],
-.col-3 input[type="text"],
-.col-2 input[type="text"],
-.col-1 input[type="text"],
-.col-5 textarea,
-.col-4 textarea,
-.col-3 textarea,
-.col-2 textarea,
-.col-1 textarea {
-  width: 100%;
-}
-
 .col-5 label,
 .col-4 label,
 .col-3 label,
