@@ -583,6 +583,26 @@ input[type="submit"] {
 форма - опитувальний лист 
 ////////////////////// */
 
+.col-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+
+  margin: 0 0 20px;
+}
+
+@media(max-width: 776px){
+  .col-5{
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+
+@media(max-width: 500px){
+  .col-5{
+    grid-template-columns: 1fr;
+  }
+}
+
 .col-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -631,13 +651,38 @@ input[type="submit"] {
   }
 }
 
+.col-1 {
+  margin: 0 0 20px;
+}
+
+.col-5 input[type="text"],
 .col-4 input[type="text"],
 .col-3 input[type="text"],
 .col-2 input[type="text"],
+.col-1 input[type="text"],
+.col-5 textarea,
 .col-4 textarea,
 .col-3 textarea,
-.col-2 textarea {
+.col-2 textarea,
+.col-1 textarea {
   width: 100%;
+}
+
+.col-5 label,
+.col-4 label,
+.col-3 label,
+.col-2 label,
+.col-1 label{
+  align-self: center;
+}
+
+.col-5 label input[type="checkbox"],
+.col-4 label input[type="checkbox"],
+.col-3 label input[type="checkbox"],
+.col-2 label input[type="checkbox"],
+.col-1 label input[type="checkbox"]{
+  position: relative;
+  top: 2px;
 }
 
 /* основний заголовок у таблиці */
@@ -651,6 +696,8 @@ form h6 {
 
 form label{
   cursor: pointer;
+  background: var(--light);
+  padding: 10px;
 }
 
 /* 3 фото внизу сторінки */
