@@ -303,12 +303,12 @@ index page
 }
 
 /* усі новини */
-#home-news > p{
+#home-news>p {
   text-align: center;
   margin: 20px 0;
 }
 
-#home-news > p a{
+#home-news>p a {
   font-size: 14px;
   display: inline-block;
   padding: 12px;
@@ -323,7 +323,7 @@ index page
   transition: background .5s;
 }
 
-#home-news > p a:hover {
+#home-news>p a:hover {
   background: var(--red);
 }
 
@@ -332,7 +332,7 @@ index page
   color: var(--white);
 }
 
-#callback > article {
+#callback>article {
   background-repeat: no-repeat !important;
   background-position-x: center !important;
   background: url('../images/callback.jpg');
@@ -518,28 +518,15 @@ inner page
   border-top: 2px dashed var(--gray);
 }
 
-#form label:nth-child(1) {
-  display: block;
-}
 
-#form label:nth-child(2) {
-  display: block;
-}
+/* /////////////////
+загальні стилі форми 
+///////////////// */
 
-#form label:nth-child(3) {
-  display: block;
-}
-
-#form label:nth-child(4) {
-  display: block;
-}
-
-#form p {
-  display: inline-block;
-}
-
-#form input[type="text"],
-#form textarea{
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
   display: block;
   width: 100%;
   padding: 10px;
@@ -548,17 +535,19 @@ inner page
   font-size: 12px;
 }
 
-#form textarea{
+textarea {
   height: 120px;
   resize: none;
 }
 
-#form input[type="text"]:focus,
-#form textarea:focus{
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
   border-color: var(--black);
 }
 
-#form input[type="submit"]{
+input[type="submit"] {
   padding: 5px 10px;
   cursor: pointer;
   background: var(--red);
@@ -566,17 +555,115 @@ inner page
   border: none;
 }
 
-/* 3 фото внизу сторінки */
-.gallery li{
+/* /////////////////////
+форма на сторінці товару
+///////////////////// */
+
+#item-form form label:nth-child(1) {
   display: block;
-  margin: 0!important;
 }
 
-.gallery li img{
-  width: 100%!important;
+#item-form form label:nth-child(2) {
+  display: block;
 }
 
-.gallery figcaption{
+#item-form form label:nth-child(3) {
+  display: block;
+}
+
+#item-form form label:nth-child(4) {
+  display: block;
+}
+
+#item-form form p {
+  display: inline-block;
+}
+
+/* //////////////////////
+форма - опитувальний лист 
+////////////////////// */
+
+.col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+
+  margin: 0 0 20px;
+}
+
+@media(max-width: 776px){
+  .col-4{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px){
+  .col-4{
+    grid-template-columns: 1fr;
+  }
+}
+
+.col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+
+  margin: 0 0 20px;
+}
+
+@media(max-width: 500px){
+  .col-3{
+    grid-template-columns: 1fr;
+  }
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+
+  margin: 0 0 20px;
+}
+
+@media(max-width: 500px){
+  .col-2{
+    grid-template-columns: 1fr;
+  }
+}
+
+.col-4 input[type="text"],
+.col-3 input[type="text"],
+.col-2 input[type="text"],
+.col-4 textarea,
+.col-3 textarea,
+.col-2 textarea {
+  width: 100%;
+}
+
+/* основний заголовок у таблиці */
+form h5 {}
+
+/* підзаголовок */
+form h6 {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+form label{
+  cursor: pointer;
+}
+
+/* 3 фото внизу сторінки */
+.gallery li {
+  display: block;
+  margin: 0 !important;
+}
+
+.gallery li img {
+  width: 100% !important;
+}
+
+.gallery figcaption {
   font-style: italic;
   display: block;
   margin: 0 0 10px;
@@ -659,12 +746,12 @@ subcategory
 //////// */
 
 #main ul,
-#main ul{
+#main ul {
   margin: 5px 0 5px;
   overflow: hidden;
 }
 
-#main li{
+#main li {
   margin: 0 0 0 30px;
 }
 
@@ -713,21 +800,21 @@ all news page
 pagination 
 /////// */
 
-.pagination{
+.pagination {
   text-align: center;
   margin: 0 0 20px;
 }
 
-.pagination ul{
+.pagination ul {
   display: inline-block;
 }
 
-.pagination li{
+.pagination li {
   display: inline-block;
   margin: 0 1px;
 }
 
-.pagination a{
+.pagination a {
   display: inline-block;
   text-decoration: none;
   padding: 7px 12px;
@@ -736,7 +823,7 @@ pagination
   transition: all .5s;
 }
 
-.pagination a:hover{
+.pagination a:hover {
   color: var(--dark);
   background: var(--white);
 }
@@ -799,7 +886,7 @@ pagination
 }
 
 /* edit button */
-.edit{
+.edit {
   text-decoration: none;
   display: inline-block;
   padding: 5px 10px;
@@ -814,7 +901,7 @@ pagination
   transition: background .5s;
 }
 
-.edit:hover{
+.edit:hover {
   background: var(--dark);
   outline: 2px solid var(--dark);
 }
