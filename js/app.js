@@ -25,6 +25,7 @@ class Accordion{constructor(t){this.title=document.querySelectorAll(t)}single(){
 // init modal window
 levusModal('#phone', '#phone-modal');
 levusModal('.phone', '#phone-modal');
+levusModal('#search', '#search-modal');
 
 // init fadeScroll
 document.querySelector('#levus-fadescroll') && fadeScroll('#levus-fadescroll', 400, 600);

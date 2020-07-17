@@ -1,7 +1,7 @@
 .levus-accordion .heading {
     cursor: pointer;
     position: relative;
-    background: var(--gray);
+    background: var(--red);
     color: var(--light);
     padding: 5px 10px;
 }

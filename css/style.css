@@ -977,6 +977,15 @@ pagination
     background: var(--dark-copyright);
 }
 
+#copyright a {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+#copyright a:hover {
+    text-decoration: none;
+}
+
 
 /* анімаційна слухавка */
 
@@ -1046,4 +1055,13 @@ pagination
 .edit:hover {
     background: var(--dark);
     outline: 2px solid var(--dark);
+}
+
+
+/* 16-07-2020 */
+
+.gsc-search-box td,
+.gsc-search-box tr,
+.gsc-search-box th {
+    border: none!important;
 }
